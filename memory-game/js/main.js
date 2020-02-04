@@ -59,10 +59,11 @@ function flipCard(){
 		console.log(cards[cardId].suit);
 
 		cardsInPlay.push(cards[cardId].rank);
+		this.setAttribute('src', cards[cardId].cardImage);
 
 		if(cardsInPlay.length === 2){
 			checkForMatch();
-			this.setAttribute('src', cards[cardId].cardImages);
+			
 		if(cardsInPlay[0]===cardsInPlay[1]){
 			alert("You found a match!");
 			}
